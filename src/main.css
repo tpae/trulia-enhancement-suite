@@ -1,0 +1,45 @@
+.keyboardContainer { 
+	display: block;
+	background-color: #000;
+	position: fixed;
+	width: 324px;
+	height: 200px;
+	z-index: 999999999;
+	top: 50%;
+	left: 50%;
+	margin-left: -162px;
+	margin-top: -100px;
+	border-radius: 8px;
+	opacity: 0.5;
+	display: none;
+}
+
+.keyboardWrapper {
+	display: block;
+	position: fixed;
+	width: 324px;
+	height: 200px;
+	z-index: 999999999999;
+	top: 50%;
+	left: 50%;
+	margin-left: -162px;
+	margin-top: -100px;
+	border-radius: 8px;
+	display: none;
+}
+
+.keyboardWrapper .icon {
+	margin: 0 auto;
+	margin-top: 40px;
+	display: block;
+	width: 70px;
+}
+
+.keyboardWrapper .title {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+	color: #fff;
+	font-family: OpenSans;
+}

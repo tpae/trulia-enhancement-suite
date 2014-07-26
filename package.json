@@ -1,0 +1,12 @@
+{
+  "name": "PDP Shortcuts",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-concat": "^0.3.0"
+  },
+  "author": "Terence Pae <tpae@trulia.com>",
+  "license": "MIT"
+}
