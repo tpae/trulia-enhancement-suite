@@ -19,18 +19,6 @@ chrome.extension.sendMessage({}, function(response) {
 				action(key, keyMapping[key]);
 			}
 
-			// initialize tooltips
-			// for(var tooltip in tooltipMapping) {
-			// 	var currentTip = tooltipMapping[tooltip];
-
-			// 	console.log($(currentTip.selector+':first').tooltip());
-
-			// 	// $(currentTip.selector+':first').tooltip({
-			// 	// 	content: currentTip.message,
-			// 	// 	anchor: 'bottomright'
-			// 	// });
-			// }
-
 			console.log("Hot keys are loaded.");
 		}
 	}, 10);
