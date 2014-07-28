@@ -11,9 +11,11 @@ Action.prototype.initialize = function() {
 };
 
 Action.prototype.trigger = function(e) {
-	this.showWrapper();
-	this.setText(this.map.icon, this.map.title);
-	this.map.action(e);
+	if (this.map.requirement()) {
+		this.setText(this.map.icon, this.map.title);
+		this.showWrapper();
+		this.map.action(e);
+	}
 };
 
 Action.prototype.showWrapper = function() {
