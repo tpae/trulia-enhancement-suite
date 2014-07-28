@@ -11,10 +11,12 @@ Action.prototype.initialize = function() {
 };
 
 Action.prototype.trigger = function(e) {
+	var self = this;
 	if (this.map.requirement()) {
-		this.setText(this.map.icon, this.map.title);
-		this.showWrapper();
-		this.map.action(e);
+		this.setText(this.map.icon, this.map.title, function() {
+			self.showWrapper();
+			self.map.action(e);
+		});
 	}
 };
 
@@ -25,8 +27,8 @@ Action.prototype.showWrapper = function() {
 	}, 800);
 };
 
-Action.prototype.setText = function(icon, title) {
-	$('.keyboardWrapper .icon').attr('src', chrome.extension.getURL("src/images/"+icon+"_2x.png"));
+Action.prototype.setText = function(icon, title, cb) {
+	$('.keyboardWrapper .icon').attr('src', chrome.extension.getURL("src/images/"+icon+"_2x.png")).on('load', cb);
 	$('.keyboardWrapper .title').html(title);
 };
 
