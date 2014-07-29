@@ -50,6 +50,10 @@ var keyMapping = {
 		title: 'Home Details',
 		icon: 'hkey',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('a[href=#homeDetails]')[0].click();
 		},
 		requirement: function() {
@@ -61,6 +65,10 @@ var keyMapping = {
 		title: 'Neighborhood Info',
 		icon: 'nkey',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('a[href=#neighborhoodInfo]')[0].click();
 		},
 		requirement: function() {
@@ -72,6 +80,10 @@ var keyMapping = {
 		title: 'Affordability',
 		icon: 'mkey',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('a[href=#affordability]')[0].click();
 		},
 		requirement: function() {
@@ -83,6 +95,10 @@ var keyMapping = {
 		title: 'Price History',
 		icon: 'pkey',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('a[href=#priceHistory]')[0].click();
 		},
 		requirement: function() {
@@ -94,6 +110,10 @@ var keyMapping = {
 		title: 'Photo View',
 		icon: '1key',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('.viewPhotoLink')[0].click();
 		},
 		requirement: function() {
@@ -105,6 +125,10 @@ var keyMapping = {
 		title: 'Street View',
 		icon: '2key',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('.viewStreetViewMapLink')[0].click();
 		},
 		requirement: function() {
@@ -116,6 +140,10 @@ var keyMapping = {
 		title: 'Map View',
 		icon: '3key',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+
 			$('.viewMapLink')[0].click();
 		},
 		requirement: function() {
@@ -160,6 +188,10 @@ var keyMapping = {
 		title: 'Save',
 		icon: 'skey',
 		action: function(e) {
+			if ($('.modal').is(':visible')) {
+				$('.boxClose').trigger('click');
+			}
+			
 			$('.property_action_follow').trigger('click');
 		},
 		requirement: function() {

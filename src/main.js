@@ -15,9 +15,9 @@ chrome.extension.sendMessage({}, function(response) {
 				.addClass('keyboardWrapper');
 
 			// bind key mapping
-			for(var key in keyMapping) {
-				action(key, keyMapping[key]);
-			}
+			_.each(keyMapping, function(map, key) {
+				new Action(key, _.clone(map));
+			});
 
 			console.log("Hot keys are loaded.");
 		}
