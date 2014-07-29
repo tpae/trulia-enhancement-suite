@@ -57,7 +57,11 @@ var keyMapping = {
 			$('a[href=#homeDetails]')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -72,7 +76,11 @@ var keyMapping = {
 			$('a[href=#neighborhoodInfo]')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -87,7 +95,11 @@ var keyMapping = {
 			$('a[href=#affordability]')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -102,7 +114,11 @@ var keyMapping = {
 			$('a[href=#priceHistory]')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -117,7 +133,11 @@ var keyMapping = {
 			$('.viewPhotoLink')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -132,7 +152,11 @@ var keyMapping = {
 			$('.viewStreetViewMapLink')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -147,7 +171,11 @@ var keyMapping = {
 			$('.viewMapLink')[0].click();
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -158,7 +186,11 @@ var keyMapping = {
 			$('#lc_info_crime').trigger('click');
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -169,7 +201,11 @@ var keyMapping = {
 			$('#lc_info_amenities').trigger('click');
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -180,7 +216,11 @@ var keyMapping = {
 			$('#lc_info_transit').trigger('click');
 		},
 		requirement: function() {
-			return true;
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
 		}
 	},
 
@@ -188,10 +228,6 @@ var keyMapping = {
 		title: 'Save',
 		icon: 'skey',
 		action: function(e) {
-			if ($('.modal').is(':visible')) {
-				$('.boxClose').trigger('click');
-			}
-			
 			$('.property_action_follow').trigger('click');
 		},
 		requirement: function() {
