@@ -1,6 +1,6 @@
 {
   "name": "PDP Shortcuts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "manifest_version": 2,
   "description": "Keyboard shortcuts for PDP",
   "homepage_url": "http://www.trulia.com",
@@ -9,6 +9,7 @@
   ],
   "content_scripts": [
     {
+      "run_at": "document_end",
       "matches": [
         "http://*.trulia.com/property/*"
       ],
@@ -16,9 +17,12 @@
         "build/vendors.js",
         "src/keys.js",
         "src/action.js",
+        "src/tooltips.js",
         "src/main.js"
       ],
       "css": [
+        "bower_components/tooltipster/css/tooltipster.css",
+        "bower_components/tooltipster/css/themes/tooltipster-light.css",
         "src/main.css"
       ]
     }

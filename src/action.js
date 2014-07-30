@@ -31,7 +31,3 @@ var setText = function(icon, title, cb) {
 	$('.keyboardWrapper .icon').attr('src', chrome.extension.getURL("src/images/"+icon+"_2x.png")).one('load', cb);
 	$('.keyboardWrapper .title').html(title);
 };
-
-var action = function(key, map) {
-	return new Action(key, map);
-}
