@@ -67,6 +67,12 @@ var tooltipMapping = {
 		selector: 'a[href=#priceHistory]'
 	},
 
+	'e': {
+		position: 'top',
+		content: "Or press the 'E' key",
+		selector: '#lc_info_schools'
+	},
+
 	'c': {
 		position: 'top',
 		content: "Or press the 'C' key",

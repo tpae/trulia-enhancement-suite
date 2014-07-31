@@ -179,6 +179,21 @@ var keyMapping = {
 		}
 	},
 
+	'e': {
+		title: 'School',
+		icon: 'ekey',
+		action: function(e) {
+			$('#lc_info_schools').trigger('click');
+		},
+		requirement: function() {
+			if ($('#photoPlayerModal').is(':visible')) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+	},
+
 	'c': {
 		title: 'Crime Map',
 		icon: 'ckey',

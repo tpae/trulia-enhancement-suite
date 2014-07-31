@@ -22,6 +22,7 @@ chrome.extension.sendMessage({}, function(response) {
 			// bind tooltips
 			_.each(tooltipMapping, function(map, key) {
 				$(map.selector).tooltipster({
+					delay: 1500,
 					theme: 'tooltipster-light',
 					position: map.position,
 					content: map.content,
