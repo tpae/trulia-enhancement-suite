@@ -1,4 +1,3 @@
-
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 		if (document.readyState === "complete") {
@@ -14,9 +13,12 @@ chrome.extension.sendMessage({}, function(response) {
 				.appendTo('body')
 				.addClass('keyboardWrapper');
 
+			// initialize new helper
+			var helper = new Helper();
+
 			// bind key mapping
 			_.each(keyMapping, function(map, key) {
-				new Action(key, map);
+				new Action(key, map, helper);
 			});
 
 			// bind tooltips
@@ -28,6 +30,14 @@ chrome.extension.sendMessage({}, function(response) {
 					content: map.content,
 					trigger: 'hover'
 				});
+			});
+
+			// bind left/right arrows
+			Mousetrap.bind(['left', 'right'], function(e) {
+				if (!$('#photoPlayerModal').is(':visible')) {
+					e.stopPropagation();
+					$('.photoPlayerCurrentItemContainer').trigger('click');
+				}
 			});
 
 			console.log("Hot keys are loaded.");
